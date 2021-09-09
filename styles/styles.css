@@ -17,20 +17,26 @@
 
 .buy{
     background-color: #ffffff;
-    padding: 88px 131px 50px;
+    padding: 88px 0 50px;
 }
 
 .buy__grid{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-column-gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
+.card__subgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-column-gap: 35px;
+    padding: 22px 0;
+}
+
 .buy__card1{
     background: #F3F3F3;
-    position: relative;
 }
 
 .buy__card2{
@@ -41,12 +47,36 @@
     background: #F3F3F3;
 }
 
+.buy-card__cats{
+    max-width: 100%;
+}
+
+.buy-card__top-part{
+    position: relative;
+}
+
+.buy-card__bottom-part{
+    padding: 29px 33px 29px 29px;
+}
+
 .card__title{
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    padding: 29px 156px 21px 29px;
+}
+
+.card__desc{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.card-desc__span{
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
 }
 
 .buy__discount{
@@ -60,24 +90,22 @@
     left: 30px;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 23px
+.buy-like__btn{
+    position: absolute;
+    top: 36px;
+    right: 32px;
+    background-color: transparent;
+    border: none;
+    fill-opacity: 0.5;
 }
 
-.col-4{
-    display: flex;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #000000;
+.buy-like__btn:hover{
+    fill-opacity: 1;
 }
 
 .border{
     border-left: 4px solid #6EBBD3;
-    padding-left: 13px;
+    padding-left: 18px;
 }
 
 .card__price{
@@ -85,7 +113,6 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    padding: 22px 204px 29px 29px;
 }
 
 .buy__btn{
@@ -98,6 +125,10 @@
     font-size: 16px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.buy__btn:hover{
+    background-color: grey;
 }
 
 .buy__btn-black{
